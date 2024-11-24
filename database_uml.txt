@@ -1,0 +1,37 @@
+1-User:
+    -civility
+    -full_name
+    -email
+    -password
+
+
+2-product:
+    -name
+    -slug
+    -description
+    -more_description
+    -additional_infos
+    -stock
+    -solde_price
+    -regular_price
+    -categories
+    -relatedProducts
+    -reviews
+    -brand
+    -imageUrls
+    -status
+    -isBestSeller
+    -isNewArrival
+    -isFeatured
+    -isSpecialOffer
+    -options 
+
+le slug d'un produit: robe été pour femme marié => (le slug) robe-ete-pour-femme-marie
+
+3-category:
+    -name
+    -slug
+    -description
+    -products
+    -imageUrls
+    -isMega
