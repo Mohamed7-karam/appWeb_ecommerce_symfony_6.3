@@ -25,8 +25,8 @@ class Category
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::ARRAY, nullable: true)]
-    private ?array $imageUrls = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imageUrl = null;
 
     #[ORM\Column(nullable: true)]
     private ?bool $isMega = null;
@@ -87,14 +87,14 @@ class Category
         return $this;
     }
 
-    public function getImageUrls(): ?array
+    public function getImageUrl(): ?string
     {
-        return $this->imageUrls;
+        return $this->imageUrl;
     }
 
-    public function setImageUrls(?array $imageUrls): static
+    public function setImageUrl(?string $imageUrl): static
     {
-        $this->imageUrls = $imageUrls;
+        $this->imageUrl = $imageUrl;
 
         return $this;
     }
@@ -151,6 +151,10 @@ class Category
         }
 
         return $this;
+    }
+    public function __toString(): string
+    {
+        return $this->name; // Vous pouvez retourner une autre propriété si nécessaire
     }
 
     public function removeProduct(Product $product): static
